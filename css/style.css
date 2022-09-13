@@ -1,0 +1,89 @@
+.main {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  /*background-image: linear-gradient(to left, red, yellow);*/
+}
+
+/*.translate {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transform: translate(10px, 50px);
+  transform: rotateY(15deg);
+  transform: scale(2, 1);
+  transform: skew(20deg, 10deg);
+  border: 1px solid black;
+}
+*/
+.translate {
+  float: left;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transform: skew(0deg, 20deg);
+  padding: 20px;
+  border-right: 5px solid black;
+  border-radius: 20px 0px 0px 20px;
+  transition: all 1s;
+}
+.translate:hover /*se puede usar el:focus tambien*/ {
+  height: 200px;
+}
+
+.translate2 {
+  float: left;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transform: skew(0deg, -20deg);
+  padding: 20px;
+  border-left: 5px solid black;
+  border-radius: 0px 20px 20px 0px;
+  transition: height 2s;
+}
+.translate2:hover {
+  height: 200px;
+}
+
+.anim1 {
+  display: block;
+  margin-top: 200px;
+  background-color: rgb(9, 255, 0);
+  width: 300px;
+  height: 300px;
+
+  animation-name: onAir;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+@keyframes efectos2 {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 50px;
+  }
+  100% {
+    width: 50px;
+    background-color: red;
+  }
+}
+
+@keyframes onAir {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
